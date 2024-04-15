@@ -150,7 +150,7 @@ class TestProductModel(unittest.TestCase):
         # See if we get back 5 products
         products = Product.all()
         self.assertEqual(len(products), 5)
-     def test_find_by_name(self):
+    def test_find_by_name(self):
         """It should Find a Product by Name"""
         products = ProductFactory.create_batch(5)
         for product in products:
@@ -161,7 +161,7 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(found.count(), count)
         for product in found:
             self.assertEqual(product.name, name)
-      def test_find_by_availability(self):
+    def test_find_by_availability(self):
         """It should Find Products by Availability"""
         products = ProductFactory.create_batch(10)
         for product in products:
@@ -172,7 +172,7 @@ class TestProductModel(unittest.TestCase):
         self.assertEqual(found.count(), count)
         for product in found:
             self.assertEqual(product.available, available)
-      def test_find_by_category(self):
+    def test_find_by_category(self):
         """It should Find Products by Category"""
         products = ProductFactory.create_batch(10)
         for product in products:
